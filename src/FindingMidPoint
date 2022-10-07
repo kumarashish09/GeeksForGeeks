@@ -1,0 +1,12 @@
+I've seen programmers use the formula
+
+mid = start + (end - start) / 2
+instead of using the simpler formula
+
+mid = (start + end) / 2
+for finding the middle element in the array or list.
+Why do they use the former one?
+/*******************************************
+Sol: mid = start + (end - start) / 2 won't overflow
+if start and end are large positive numbers. With signed operands, overflow is undefined
+(Note that end - start may overflow, but only if start < 0 or end < 0.)
